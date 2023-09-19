@@ -1,0 +1,25 @@
+/* RESET */
+*{
+    /* para no dejar que el padding sume al widh */
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+    --margenGrid-S: 20px;
+    --margenGrid-D: 40px;
+
+}
+
+/* CONTENEDOR */
+.contenedor-grid{
+    padding: 0 var(--margenGrid-S);
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: var(--margenGrid-S);
+    @media only screen and (min-width: 1000px) {
+        padding: 0 var(--margenGrid-D);
+        grid-template-columns:repeat(12, 1fr);
+        column-gap: var(--margenGrid-D);
+    }
+}
