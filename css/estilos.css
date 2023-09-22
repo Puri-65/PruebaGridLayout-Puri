@@ -30,10 +30,13 @@ header, main, footer{
 }
 header{
     background-color: greenyellow;
-  
 }
+
 /* MAIN */
 main{
+    /* Anular el grid-template-rows que teníamos */
+    grid-template-rows: none;
+   
     background-color: turquoise;
     margin: 0 var(--margenGrid-S);
     & .main__titular{
@@ -46,10 +49,34 @@ main{
         max-width: 1024px;
         justify-self: center;
     }
+
+& img{
+        width: 100%;
+    }
+
+& .main__imagen01{
+    grid-column: 1/4;
 }
+
+& .main__imagen02{
+    grid-column: 4/7;
+}
+
+& .main__imagen03{
+    grid-column: 1/6;
+}
+& .main__imagen04{
+    grid-column:2/7;
+}
+
+
+}
+
 
 /* FOOTER */
 /* Ancho total */
 footer{
     background-color: grey;
 }
+
+
